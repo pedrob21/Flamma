@@ -123,7 +123,7 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0; line-height: 1.15; }
 .hero__glow {
   position: absolute; z-index: -2;
   width: min(1100px, 140vw); aspect-ratio: 1.6;
-  left: 50%; top: 38%; translate: -50% -50%;
+  left: 50%; top: 50%; translate: -50% -50%;
   background:
     radial-gradient(closest-side at 35% 55%, rgba(250, 104, 0, 0.35), transparent 70%),
     radial-gradient(closest-side at 65% 45%, rgba(252, 6, 216, 0.38), transparent 70%);
@@ -152,7 +152,7 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0; line-height: 1.15; }
   letter-spacing: .28em;
 }
 .hero__divider {
-  width: 90px; height: 3px; margin: clamp(120px, 26vh, 300px) auto clamp(36px, 5vh, 52px);
+  width: 90px; height: 3px; margin: 0 auto clamp(36px, 5vh, 52px);
   border-radius: 3px; background: var(--grad);
   box-shadow: 0 0 16px var(--pink);
 }
@@ -161,6 +161,9 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0; line-height: 1.15; }
   margin: 14px auto 40px; max-width: 560px;
   color: var(--ink-soft); font-size: clamp(1rem, 2vw, 1.12rem);
 }
+
+/* Chamada logo abaixo da primeira dobra */
+.intro { padding: clamp(70px, 10vw, 110px) 0 clamp(30px, 5vw, 50px); text-align: center; }
 
 /* ============ Sections ============ */
 .section { padding: clamp(80px, 12vw, 130px) 0; position: relative; }
