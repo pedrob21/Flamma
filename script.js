@@ -170,7 +170,7 @@ form.addEventListener('submit', async (e) => {
     statusEl.textContent = 'Não foi possível enviar agora. Verifique sua conexão e tente de novo.';
     statusEl.classList.add('is-error');
     btn.disabled = false;
-    label.textContent = 'Participar';
+    label.textContent = 'Quero participar';
     btn.querySelector('.spinner')?.remove();
   }
 });
@@ -179,11 +179,10 @@ function showSuccess(duplicate) {
   const first = form.nome.value.trim().split(/\s+/)[0];
   form.innerHTML = `
     <div class="form-success">
-      <div class="form-success__icon"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
-      <h3>${duplicate ? 'Você já está participando!' : 'Inscrição confirmada!'}</h3>
+      <h3>${duplicate ? 'Você já está <em>dentro</em>' : 'Tá dentro, <em>' + escapeHtml(first) + '</em>'}</h3>
       <p>${duplicate
         ? 'Esse WhatsApp já estava cadastrado — sua participação continua valendo.'
-        : `Boa sorte, ${escapeHtml(first)}! O resultado será divulgado após as apresentações.`}</p>
+        : 'Inscrição confirmada. O resultado sai depois das apresentações. Boa sorte!'}</p>
     </div>`;
 }
 
