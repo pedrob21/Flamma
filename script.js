@@ -3,7 +3,7 @@
    Cole aqui a URL do App da Web do Google Apps Script
    (veja o passo a passo em README.md).
    ========================================================== */
-const SHEETS_URL = '';
+const SHEETS_URL = 'https://script.google.com/macros/s/AKfycbyjBqksaLZGhYm61ItExzWB7LJikk_7O1GoFOn_DMnVa6RveMzoA823a_K8IZ4rOV34/exec';
 
 /* ---------- Topbar aparece depois da primeira dobra ---------- */
 const topbar = document.querySelector('.topbar');
@@ -157,7 +157,6 @@ form.addEventListener('submit', async (e) => {
     nome: form.nome.value.trim(),
     whatsapp: form.whatsapp.value.trim(),
     instagram: '@' + form.instagram.value.trim(),
-    curso: form.curso.value.trim(),
     aceite: form.aceite.checked ? 'sim' : 'nao',
   });
 

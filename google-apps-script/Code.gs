@@ -6,7 +6,7 @@
  */
 
 const SHEET_NAME = 'Inscrições';
-const HEADERS = ['Data/Hora', 'Nome completo', 'WhatsApp', 'Instagram', 'Curso', 'Aceite'];
+const HEADERS = ['Data/Hora', 'Nome completo', 'WhatsApp', 'Instagram', 'Aceite'];
 
 function doPost(e) {
   const lock = LockService.getScriptLock();
@@ -16,7 +16,6 @@ function doPost(e) {
     const nome = clean(p.nome, 120);
     const whatsapp = clean(p.whatsapp, 20);
     const instagram = clean(p.instagram, 32);
-    const curso = clean(p.curso, 80);
     const digits = whatsapp.replace(/\D/g, '');
 
     if (!nome || digits.length < 10 || instagram.length < 2 || p.aceite !== 'sim') {
@@ -31,7 +30,7 @@ function doPost(e) {
       if (existing.indexOf(digits) !== -1) return json({ ok: true, duplicate: true });
     }
 
-    sheet.appendRow([new Date(), nome, whatsapp, instagram, curso, 'Sim']);
+    sheet.appendRow([new Date(), nome, whatsapp, instagram, 'Sim']);
     return json({ ok: true });
   } finally {
     lock.releaseLock();

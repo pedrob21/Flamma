@@ -29,7 +29,7 @@ Para ver localmente, basta abrir o `index.html` no navegador.
    const SHEETS_URL = 'https://script.google.com/macros/s/XXXXXXXX/exec';
    ```
 7. Teste: preencha o formulário no site. Uma aba **Inscrições** aparece na planilha com as colunas
-   Data/Hora · Nome completo · WhatsApp · Instagram · Curso · Aceite.
+   Data/Hora · Nome completo · WhatsApp · Instagram · Aceite.
 
 > Se alterar o `Code.gs` depois, publique de novo em **Implantar → Gerenciar implantações → Editar → Nova versão** (a URL continua a mesma).
 
