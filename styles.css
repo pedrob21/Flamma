@@ -258,6 +258,7 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0; line-height: 1.15; }
   transform-origin: bottom center;
 }
 .member__photo img[src*="monique"] { max-height: 90%; }
+.member__photo img[src*="ruan"] { max-height: 90%; }
 .member h3 { font-size: 1.5rem; }
 .member p { margin: 4px 0 0; color: var(--ink-soft); font-size: .98rem; }
 
